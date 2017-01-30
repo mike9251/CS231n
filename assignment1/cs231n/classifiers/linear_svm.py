@@ -98,7 +98,7 @@ def svm_loss_vectorized(W, X, y, reg):
 
     X_mask = np.zeros(margins.shape)
 
-    #num_train x 1. Where we have correct_scores in X_mask we get 0 [1,0,0,0,0,0,0,0,0,0] - for the first sample
+    #num_train x 1. here we have correct_scores in X_mask we get 0 [1,0,0,0,0,0,0,0,0,0] - for the first sample
     X_mask[margins > 0] = 1   
 
     # for each sample, find the total number of classes where margin > 0 [1,1,9,3,4,5,....N].T - for N samples
